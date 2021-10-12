@@ -2,10 +2,25 @@ import React from "react";
 
 //コンポーネント化（Reactのコンポーネントを作成する場合、ファイルの拡張子をjsxにする！！）
 const App = () => {
+  // イベントの関数化
+  const onClickButton = () => alert();
+
+  // cssの関数化
+  const contentStyle = {
+    color: "blue",
+    fontSize: "18px"
+  };
+
   return (
     <>
-      <h1>こんにちは！</h1>
-      <p>お元気ですか？</p>
+      {/* 外側の{}はjs書くよの波括弧、内側の{}はjsのオブジェクトの波括弧 */}
+      {/* cssのプロパティの記述は''シングルクォーテーションで囲わないと怒られる 
+    　　　　　　　　また、直接cssを書き込む方法と、関数としてcssを作り、適用できる方法の2パターンあり。*/}
+      <h1 style={{ color: "red" }}>こんにちは！</h1>
+      <p style={contentStyle}>お元気ですか？</p>
+
+      {/* イベントはキャメルケースで変数宣言（onClick） */}
+      <button onClick={onClickButton}>ボタン</button>
     </>
   );
 };
