@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import ColofulMessage from "./components/ColorfulMessage";
 
 //コンポーネント化（Reactのコンポーネントを作成する場合、ファイルの拡張子をjsxにする！！）
 const App = () => {
   // イベントの関数化
-  const onClickButton = () => alert();
+  const onClickCountUp = () => {
+    setNum(num + 1);
+  };
+
+  // State [num(動的なStateの変数), setNum(Stateを更新する関数)]  useState(初期値を設定)
+  const [num, setNum] = useState(0);
 
   return (
     <>
@@ -19,7 +24,8 @@ const App = () => {
       <ColofulMessage color="pink">元気です！</ColofulMessage>
 
       {/* イベントはキャメルケースで変数宣言（onClick） */}
-      <button onClick={onClickButton}>ボタン</button>
+      <button onClick={onClickCountUp}>カウントアップ！</button>
+      <p>{num}</p>
     </>
   );
 };
