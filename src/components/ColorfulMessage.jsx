@@ -1,6 +1,7 @@
 import React from "react";
 
 const ColorfulMessage = (props) => {
+  // console.log("カラフル");
   // 分割代入でprops.colorと指定したものをcolorだけで呼び出せるようにしている
   const { color, children } = props;
 
