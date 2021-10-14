@@ -1,6 +1,6 @@
 import React from "react";
 
-const ColorfulMessage = (props) => {
+export const ColorfulMessage = (props) => {
   // console.log("カラフル");
   // 分割代入でprops.colorと指定したものをcolorだけで呼び出せるようにしている
   const { color, children } = props;
@@ -15,4 +15,7 @@ const ColorfulMessage = (props) => {
   return <p style={contentStyle}>{children}</p>;
 };
 
-export default ColorfulMessage;
+//3行目の変数宣言のところにexportとつけるやり方の2パターンあり
+// App.jsでimportする時に、関数名を{}ブラケットで囲うかが異なる。
+//下記の場合、{}で囲う必要なし！
+// export default ColorfulMessage;

@@ -2,7 +2,7 @@
 /* eslint react-hooks/exhaustive-deps: off */
 
 import React, { useEffect, useState } from "react";
-import ColofulMessage from "./components/ColorfulMessage";
+import { ColorfulMessage } from "./components/ColorfulMessage";
 
 //コンポーネント化（Reactのコンポーネントを作成する場合、ファイルの拡張子をjsxにする！！）
 const App = () => {
@@ -46,8 +46,8 @@ const App = () => {
 
       {/* Propsの使用　　pタグごととかにstyleを各々書いてくと煩雑だからPropsでまとめる
        ※ color="blue" と　お元気ですか？（children）　とかがProps*/}
-      <ColofulMessage color="blue">お元気ですか？</ColofulMessage>
-      <ColofulMessage color="pink">元気です！</ColofulMessage>
+      <ColorfulMessage color="blue">お元気ですか？</ColorfulMessage>
+      <ColorfulMessage color="pink">元気です！</ColorfulMessage>
 
       {/* イベントはキャメルケースで変数宣言（onClick） */}
       <button onClick={onClickCountUp}>カウントアップ！</button>
